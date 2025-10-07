@@ -2,11 +2,13 @@
 
 # README — Análisis comparativo (MNIST)
 
-> **Resumen:** Dos notebooks(ambos usan `tensorflow_datasets` y MNIST). Uno entrena una **CNN** (`NumerosMejorada.ipynb`) y el otro una **red densa** (`RedesNeuonales (Regular).ipynb`). Este README describe qué hace cada script/notebook, extrae los resultados de entrenamiento y compara ambos modelos estrictamente con lo que hay en los archivos.
+> **Resumen:** Dos notebooks(ambos usan `tensorflow_datasets` y MNIST). Uno entrena una **CNN** (`NumerosMejorada.ipynb`) y el otro una **red densa** (`RedesNeuonales (Regular).ipynb`).
 
 ---
 
 ## Contenido analizado
+
+El dataset que se analiza contiene imágenes en blanco y negro de números del 0 al 9. Se utiliza un modelo de una red neuronal densa en un notebook y en el otro una red neuronal convolucional para comparar su rendimiento y resultados.
 
 * `NumerosMejorada.ipynb` — implementación y entrenamiento de una **red convolucional (CNN)**.
 * `RedesNeuonales (Regular).ipynb` — implementación y entrenamiento de una **red totalmente conectada (MLP / densa)**.
@@ -32,7 +34,6 @@
 
 ### CNN (`NumerosMejorada.ipynb`)
 
-```text
 Sequential([
   Conv2D(32, (3,3), input_shape=(28,28,1), activation='relu'),
   MaxPooling2D(2,2),
@@ -42,9 +43,6 @@ Sequential([
   Dense(128, activation='relu'),
   Dense(10, activation='softmax')
 ])
-```
-
-* Parámetros aproximados totales: **~225,034**.
 
 ### MLP / Densa (`RedesNeuonales (Regular).ipynb`)
 
